@@ -163,7 +163,7 @@ cartIcon.addEventListener("click", () => {
 closeBtn.addEventListener("click", (e) => {
   console.log(cartTab);
   e.preventDefault();
-  cartTab.classList.remove("inactive");
+  cartTab.classList.remove("active");
 });
 
 function addToCart(item) {
