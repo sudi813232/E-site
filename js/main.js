@@ -103,6 +103,7 @@ foodItems.forEach((item) => {
   `;
   const button = div.querySelector(".btn");
   button.addEventListener("click", () => {
+    console.log(item);
     addToCart(item.name, item.price, item.image);
     cartTab.classList.add("active");
   });

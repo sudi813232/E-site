@@ -163,7 +163,12 @@ body {
 
 
 .categories {
-  padding: 70px 0;
+  text-decoration: none;
+    color: #444;
+    padding: 6px 15px;
+    border-radius: 20px;
+    transition: .3s;
+ 
 }
 
 .categories__container {
@@ -206,7 +211,8 @@ body {
 }
 
 .categories__price {
-  color: #555;
+  color: black;
+  
   margin-bottom: 10px;
 }
 
