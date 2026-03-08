@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <title>Delicacy</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="/styles/style.css">
+  <link rel="stylesheet" href="styles/style.css">
   <script defer src="js/main.js"></script>
 </head>
 
@@ -13,32 +13,41 @@
   <header class="nav">
     <div class="nav__container">
       <div class="nav__logo"> <img src="image/noto.png" alt="BlinkIt" class="nav__logo-img"> </div>
-      <nav class="nav__menu"> <a class="nav__link nav__link--active" href="#">Home</a> <a class="nav__link"
-          href="#">Categories</a> <a class="nav__link" href="#">Products</a> <a class="nav__link" href="#">About</a> <a
-          class="nav__link" href="#">Customers</a> </nav>
-      <div class="nav__profile"> <img src="image/images.png" class="nav__avatar"> <span
-          class="nav__username">Sudikshya</span>
-        <div class="nav__cart"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+      <nav class="nav__menu">
+        <a class="nav__link nav__link--active" href="#">Home</a>
+        <a class="nav__link" href="#">Categories</a>
+        <a class="nav__link" href="#">Products</a>
+        <a class="nav__link" href="#">About</a>
+        <a class="nav__link" href="#">Customers</a>
+      </nav>
+      <div class="nav__profile">
+        <img src="image/images.png" class="nav__avatar">
+        <span class="nav__username">Sudikshya</span>
+        <div class="nav__cart">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
             <path fill="currentColor"
               d="M17 18c-1.11 0-2 .89-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2M1 2v2h2l3.6 7.59l-1.36 2.45c-.15.28-.24.61-.24.96a2 2 0 0 0 2 2h12v-2H7.42a.25.25 0 0 1-.25-.25q0-.075.03-.12L8.1 13h7.45c.75 0 1.41-.42 1.75-1.03l3.58-6.47c.07-.16.12-.33.12-.5a1 1 0 0 0-1-1H5.21l-.94-2M7 18c-1.11 0-2 .89-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2" />
-          </svg> </div>
+          </svg>
+        </div>
       </div>
     </div>
   </header>
+
   <section class="food">
     <div class="food__container">
       <div class="food__content">
         <h1 class="food__title">BRB, Eating.</h1>
-        <p class="food__text"> All your favorite bites. One place. </p>
-        <a href="shop.html" class="food__btn">Let’s Eat 🍔</a>
+        <p class="food__text">All your favorite bites. One place.</p>
+        <a href="shop.html" class="food__btn">Let's Eat 🍔</a>
       </div>
     </div>
   </section>
+
   <section>
     <div class="p-top">
       <div class="text-center">
         <h5>Our Services</h5>
-        <h2>How does it work? </h2>
+        <h2>How does it work?</h2>
       </div>
       <div class="cards">
         <div class="service-card">
@@ -52,131 +61,108 @@
           <div class="images-container">
             <img src="image/fast-delivery.png">
             <h3>Fast Delivery</h3>
-            <p>You only need few steps</p>
+            <p>Delivered right to your door</p>
           </div>
         </div>
         <div class="service-card">
           <div class="images-container">
             <img src="image/best-quality.png">
             <h3>Best Quality</h3>
-            <p>You only need few steps</p>
+            <p>Fresh and delicious every time</p>
           </div>
         </div>
       </div>
+    </div>
   </section>
+
+  <section class="categories" id="categories">
+    <div class="categories__container">
+      <div class="text-center">
+        <h5>Our Categories</h5>
+        <h2>Choose Your Favorite</h2>
+      </div>
+
+      <div class="categories__list">
+
+        <div class="categories__card">
+          <div class="categories__image"><img src="image/pizza.png" alt="Pizza"></div>
+          <h4 class="categories__title">Pizza</h4>
+          <p class="categories__price">$200</p>
+          <button class="btn add-to-cart" data-name="Pizza" data-price="200" data-image="image/pizza.png">Add to
+            cart</button>
+        </div>
+
+        <div class="categories__card">
+          <div class="categories__image"><img src="image/burger.png" alt="Burger"></div>
+          <h4 class="categories__title">Burger</h4>
+          <p class="categories__price">$150</p>
+          <button class="btn add-to-cart" data-name="Burger" data-price="150" data-image="image/burger.png">Add to
+            cart</button>
+        </div>
+
+        <div class="categories__card">
+          <div class="categories__image"><img src="image/sandwich.png" alt="Sandwich"></div>
+          <h4 class="categories__title">Sandwich</h4>
+          <p class="categories__price">$100</p>
+          <button class="btn add-to-cart" data-name="Sandwich" data-price="100" data-image="image/sandwich.png">Add to
+            cart</button>
+        </div>
+
+        <div class="categories__card">
+          <div class="categories__image"><img src="image/spaghetti.png" alt="Spaghetti"></div>
+          <h4 class="categories__title">Spaghetti</h4>
+          <p class="categories__price">$167</p>
+          <button class="btn add-to-cart" data-name="Spaghetti" data-price="167" data-image="image/spaghetti.png">Add to
+            cart</button>
+        </div>
+
+        <div class="categories__card">
+          <div class="categories__image"><img src="image/sushi.png" alt="Sushi"></div>
+          <h4 class="categories__title">Sushi</h4>
+          <p class="categories__price">$250</p>
+          <button class="btn add-to-cart" data-name="Sushi" data-price="250" data-image="image/sushi.png">Add to
+            cart</button>
+        </div>
+
+       
+         <div class="categories__card">
+          <div class="categories__image"><img src="image/chicken.png" alt="Fried Chicken"></div>
+          <h4 class="categories__title">Fried Chicken</h4>
+          <p class="categories__price">$620</p>
+          <button class="btn add-to-cart" data-name="Fried Chicken" data-price="620" data-image="image/chicken.png">Add to
+            cart</button>
+        </div>
+
+
+
+      </div>
+    </div>
+  </section>
+
   <section>
     <div class="wrapper p-top">
       <div class="text-center">
         <h5>Our Menu</h5>
         <h2>The Most Popular</h2>
       </div>
-      <div class="card-list text-center">
-        <!-- <div class="order-card">
-          <div class="card-image">
-            <img src="image/burger.png">
-          </div>
-          <h4>Double Chicken Burger</h4>
-          <h4 class="price">$200</h4>
-          <button class="btn add-to-cart" 
-            data-image="image/burger.png"> Add to cart </button>
+      <div class="card-list text-center"></div>
+
+      <div class="cart-tab">
+        <h2>Your Cart</h2>
+        <div class="cart-list"></div>
+        <div class="total-container">
+          <h4>Total:</h4>
+          <h4 class="cart-total">$0.00</h4>
         </div>
-        <div class="order-card">
-          <div class="card-image"> <img src="image/pizza.png">
-          </div>
-          <h4>Pizza</h4>
-          <h4 class="price">$150</h4>
-          <button class="btn add-to-cart"  data-image="image/pizza.png"> Add to cart</button>
-        </div> -->
+        <div class="btn-container">
+          <button type="button" class="btn">Checkout</button>
+          <button type="button" class="btn close-btn">Close</button>
+        </div>
       </div>
-      <!-- <div class="card-list text-center ">
-         <div class="order-card"> 
-          <div class="card-image"> 
-            <img src="image/burger.png">
-           </div> 
-           <h4>Double Chicken Burger</h4>
-            <h4 class="price">$200</h4> 
-            <a href="#" class="btn">Add to cart</a> 
-          </div>
-           <div class="order-card"> 
-            <div class="card-image"> 
-              <img src="image/Chicken-Roll.png">
-             </div> <h4>Double Chicken Roll</h4>
-              <h4 class="price">$200</h4> 
-              <a href="#" class="btn">Add to cart</a> 
-            </div> 
-            <div class="order-card"> 
-              <div class="card-image"> 
-                <img src="image/lasagna.png"> 
-              </div> 
-              <h4>Extra Cheese lasagna</h4> 
-              <h4 class="price">$200</h4>
-               <a href="#" class="btn">Add to cart</a> 
-              </div>
-               <div class="order-card"> 
-                <div class="card-image"> 
-                  <img src="image/pizza.png">
-                 </div> 
-                 <h4>Pizza</h4>
-                  <h4 class="price">$200</h4> 
-                  <a href="#" class="btn">Add to cart</a>
-                 </div> 
-                 <div class="order-card">
-                   <div class="card-image">
-                     <img src="image/sandwich.png">
-                     </div> <h4>Sandwich</h4>
-                      <h4 class="price">$200</h4> 
-                      <a href="#" class="btn">Add to cart</a>
-                     </div> 
-                     <div class="order-card"> 
-                      <div class="card-image"> 
-                        <img src="image/spaghetti.png"> 
-                      </div> <h4>Spaghetti</h4> 
-                      <h4 class="price">$200</h4> 
-                      <a href="#" class="btn">Add to cart</a> 
-                    </div> -->
-    </div>
-    <div class="cart-tab">
-  <h2>Your Cart</h2>
 
-  <div class="cart-list"></div>
-
-  <div class="total-container">
-    <h4>Total:</h4>
-    <h4 class="cart-total">$0.00</h4>
-  </div>
-
-  <div class="btn-container">
-  <button  type="button" class= "btn"> Checkout</button>
-    <button  type="button" class= "btn close-btn">Close </button>
-  </div>
-</div>
-
-
-    <!-- </div>
-    <div class="total">
-      <div class="total-container">
-        <h4>Total:</h4>
-        <h4 class="cart-total">$0.00</h4>
-      </div>
-      <div class="btn-container">
-        <a href="#" class="btn close-btn">Close</a>
-        <a href="#" class="btn">Checkout</a>
-      </div> -->
-    </div>
-    </div>
     </div>
   </section>
-  <section>
-    <div class="review">
-      <div class="images-container">
-        <img src="image/delivery-boy-with-phone.png" class="img-meme">
-      </div>
-      <div class="content">
-        <h5> Our Reviews </h5>
-        <h2> What They Say? </h2>
-      </div>
-    </div>
-  </section>
+
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </body>
 
