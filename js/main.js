@@ -148,3 +148,7 @@ function closeCheckout() {
   document.getElementById("checkoutOverlay").classList.remove("checkout-overlay--active");
   cartTab.classList.remove("active");
 }
+const cards = document.querySelectorAll(".card")
+const observer = new IntersectionObserver(entries =>{
+  console.log(entries);
+})

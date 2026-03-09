@@ -17,8 +17,9 @@
       <nav class="nav__menu">
         <a class="nav__link nav__link--active" href="#">Home</a>
         <a href="categories/categories.html" class="nav__link">Categories</a>
-        <a class="nav__link" href="#">About</a>
-        <a class="nav__link" href="#">Customers</a>
+        <a class="nav__link" href="#about">About</a>
+
+        <a class="nav__link" href="#Customers">Customers</a>
       </nav>
       <div class="nav__profile">
         <img src="image/images.png" class="nav__avatar">
@@ -111,13 +112,13 @@
       <p class="checkout__subtitle">Fill in your details</p>
 
       <label class="checkout__label">Your Name</label>
-      <input class="checkout__input" type="text" id="userName" placeholder="e.g. Sudikshya">
+      <input class="checkout__input" type="text" id="userName" placeholder="e.g. Sneha">
 
       <label class="checkout__label">Phone Number</label>
-      <input class="checkout__input" type="text" id="userPhone" placeholder="e.g. 9800000000">
+      <input class="checkout__input" type="text" id="userPhone" placeholder="e.g. 98********">
 
       <label class="checkout__label">Delivery Address</label>
-      <input class="checkout__input" type="text" id="userAddress" placeholder="e.g. Kathmandu, Ward 5">
+      <input class="checkout__input" type="text" id="userAddress" placeholder="e.g. Bhadson road">
 
       <label class="checkout__label">Payment Method</label>
       <select class="checkout__input checkout__input--select" id="paymentMethod">
@@ -140,7 +141,7 @@
     <div class="checkout__success" id="successMessage" style="display:none;">
       <div class="checkout__success-icon"></div>
       <h2 class="checkout__title">Order Placed!</h2>
-      <p class="checkout__success-text">Thank you, <strong id="thankYouName"></strong>!</p>
+      <p class="checkout__success-text">Thank you, <strong id="thankYouName"></strong></p>
       <p class="checkout__success-text">Delivering to: <strong id="thankYouAddress"></strong></p>
       <p class="checkout__success-text">Payment: <strong id="thankYouPayment"></strong></p>
       <p class="checkout__success-text">We'll call you on: <strong id="thankYouPhone"></strong></p>
@@ -150,6 +151,105 @@
     </div>
 
   </div>
+
+  <section id="about" class="about">
+    <div class="about__container">
+
+      <div class="about__text">
+        <h5 class="about__subtitle">Who Are We?</h5>
+        <h2 class="about__title">We Love Food.<br>And We Love You.</h2>
+        <p class="about__description">
+          Delicacy started with one simple idea — great food should be easy to get.<br>
+          Whether you're craving a late night burger or a fancy pasta dinner, <br>we've
+          got you covered. Fresh ingredients, fast delivery, zero stress.
+        </p>
+
+        <div class="about__stats">
+          <div class="about__stat">
+            <h3 class="about__stat-number">500+</h3>
+            <p class="about__stat-label">Menu Items</p>
+          </div>
+          <div class="about__stat">
+            <h3 class="about__stat-number">10k+</h3>
+            <p class="about__stat-label">Happy Customers</p>
+          </div>
+          <div class="about__stat">
+            <h3 class="about__stat-number">30 min</h3>
+            <p class="about__stat-label">Avg Delivery</p>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+  </section>
+
+
+  <section class="footer">
+    <div class="footer__container">
+
+      <div class="footer__brand">
+        <div class="footer__logo">
+          <img src="image/noto.png" alt="Euphoria" class="brand_logo">
+        </div>
+
+
+
+        <div class="footer__socials">
+          <a href="#"><img src="image/Vector.svg"></a>
+          <a href="#"><img src="image/linkedin 1.svg"></a>
+          <a href="#"><img src="image/instagram 1.svg"></a>
+
+        </div>
+      </div>
+
+      <div class="footer__column">
+        <h4>Home</h4>
+
+        <a href="#">How To Use</a>
+        <a href="#">Key Features</a>
+        <a href="#">Pricing</a>
+
+      </div>
+      <div class="footer__column">
+        <h4>App</h4>
+        <a href="#">Mobile App</a>
+        <a href="#">Desktop App</a>
+        <a href="#">How To Use</a>
+      </div>
+
+      <div class="footer__column">
+        <h4>All Pages</h4>
+        <a href="#">Home</a>
+        <a href="#">App</a>
+        <a href="#">Blogs</a>
+        <a href="#">Blog Open</a>
+        <a href="#">Contact</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">404</a>
+      </div>
+      <!-- <div class="mobile__app">
+        <img src="image/Mobile App.svg" alt="mobile" class="mobile__ap">
+</div> -->
+
+
+    </div>
+    <div class="footer-end">
+      <div class="end__line">
+        <p class="end__para">© 2024 Euphoria. All rights reserved</p>
+
+      </div>
+      <div class="end__cl">
+        <P class="end__poli">Privacy Policy</p>
+      </div>
+      <div class="end__cl">
+        <P class="end__pol">Terms of Services</p>
+      </div>
+    </div>
+  </section>
+
+
 </body>
 
 </html>
