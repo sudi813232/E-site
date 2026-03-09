@@ -114,13 +114,61 @@
           <h4 class="cart-total">$0.00</h4>
         </div>
         <div class="btn-container">
-          <button type="button" class="btn">Checkout</button>
+          <button type="button" class="btn btn--checkout">Checkout</button>
           <button type="button" class="btn close-btn">Close</button>
         </div>
       </div>
 
     </div>
   </section>
+  <div class="checkout-overlay" id="checkoutOverlay"></div>
+
+  <div class="checkout" id="checkoutPopup">
+
+    <div class="checkout__form" id="checkoutForm">
+      <h2 class="checkout__title"> Checkout</h2>
+      <p class="checkout__subtitle">Fill in your details</p>
+
+      <label class="checkout__label">Your Name</label>
+      <input class="checkout__input" type="text" id="userName" placeholder="e.g. Sudikshya">
+
+      <label class="checkout__label">Phone Number</label>
+      <input class="checkout__input" type="text" id="userPhone" placeholder="e.g. 9800000000">
+
+      <label class="checkout__label">Delivery Address</label>
+      <input class="checkout__input" type="text" id="userAddress" placeholder="e.g. Kathmandu, Ward 5">
+
+      <label class="checkout__label">Payment Method</label>
+      <select class="checkout__input checkout__input--select" id="paymentMethod">
+        <option value="">-- Select --</option>
+        <option value="Cash on Delivery">Cash on Delivery</option>
+        <option value="UPI"> UPI</option>
+        <option value="Card"> Card</option>
+      </select>
+
+      <div class="checkout__total">
+        Total: <strong class="checkout__total-amount" id="checkoutTotal">$0.00</strong>
+      </div>
+
+      <div class="checkout__actions">
+        <button class="checkout__btn checkout__btn--place" onclick="placeOrder()">Place Order </button>
+        <button class="checkout__btn checkout__btn--cancel" onclick="closeCheckout()">Cancel</button>
+      </div>
+    </div>
+
+    <div class="checkout__success" id="successMessage" style="display:none;">
+      <div class="checkout__success-icon"></div>
+      <h2 class="checkout__title">Order Placed!</h2>
+      <p class="checkout__success-text">Thank you, <strong id="thankYouName"></strong>!</p>
+      <p class="checkout__success-text">Delivering to: <strong id="thankYouAddress"></strong></p>
+      <p class="checkout__success-text">Payment: <strong id="thankYouPayment"></strong></p>
+      <p class="checkout__success-text">We'll call you on: <strong id="thankYouPhone"></strong></p>
+      <button class="checkout__btn checkout__btn--place checkout__btn--full" onclick="closeCheckout()">
+        Done 🍔
+      </button>
+    </div>
+
+  </div>
   </body>
 
 </html>

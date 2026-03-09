@@ -48,4 +48,43 @@ function addToCart(name, price, image) {
   }
   updateCart();
 }
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelector(".btn--checkout").addEventListener("click", function () {
+    if (cart.length === 0) {
+      alert("Your cart is empty! Add some food first 🍔");
+      return;
+    }
+    const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+    document.getElementById("checkoutTotal").textContent = "$" + total.toFixed(2);
+    document.getElementById("checkoutForm").style.display = "block";
+    document.getElementById("successMessage").style.display = "none";
+    document.getElementById("checkoutPopup").classList.add("checkout--active");
+    document.getElementById("checkoutOverlay").classList.add("checkout-overlay--active");
+  });
+});
+
+function placeOrder() {
+  const name    = document.getElementById("userName").value.trim();
+  const phone   = document.getElementById("userPhone").value.trim();
+  const address = document.getElementById("userAddress").value.trim();
+  const payment = document.getElementById("paymentMethod").value;
+  if (!name || !phone || !address || !payment) {
+    alert("Please fill in all fields! ");
+    return;
+  }
+  document.getElementById("thankYouName").textContent    = name;
+  document.getElementById("thankYouAddress").textContent = address;
+  document.getElementById("thankYouPhone").textContent   = phone;
+  document.getElementById("thankYouPayment").textContent = payment;
+  document.getElementById("checkoutForm").style.display   = "none";
+  document.getElementById("successMessage").style.display = "block";
+  cart.length = 0;
+  updateCart();
+}
+
+function closeCheckout() {
+  document.getElementById("checkoutPopup").classList.remove("checkout--active");
+  document.getElementById("checkoutOverlay").classList.remove("checkout-overlay--active");
+  cartTab.classList.remove("active");
+}
 
