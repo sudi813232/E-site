@@ -402,6 +402,9 @@ body {
   transition: .3s ease;
   z-index: 1000;
 }
+.cart-tab h2{
+  text-align: center;
+}
 
 .cart-tab.active {
   right: 0;
@@ -456,6 +459,7 @@ body {
 .btn-container {
   display: flex;
   gap: 10px;
+  justify-content: center;
 }
 
 .quantity {
