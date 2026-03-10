@@ -1,0 +1,310 @@
+.page-wrapper {
+  display: flex;               
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 25px;
+  gap: 40px;
+}
+
+.sidebar {
+  width: 200px;
+  flex-shrink: 0;             
+  position: sticky;            
+  top: 90px;
+  height: fit-content;
+}
+
+.sidebar-heading {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #888;
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.sidebar-item {
+  display: block;              
+  padding: 12px 16px;
+  text-decoration: none;
+  color: #444;
+  font-size: 15px;
+  border-radius: 8px;
+  margin-bottom: 4px;
+  transition: .2s;
+}
+
+.sidebar-item:hover {
+  background: #fdf0e0;
+  color: brown;
+}
+
+.sidebar-item-active {
+  background: #fdf0e0;
+  color: brown;
+  font-weight: 600;
+}
+
+.food-section {
+  flex: 1;                   
+}
+
+.breadcrumb {
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-size: 32px;
+  color: #2c1a0e;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #eee;
+}
+
+.section-subtitle {
+  font-size: 20px;
+  color: #2c1a0e;
+  margin-bottom: 24px;
+}
+
+.food-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 30px;
+}
+
+.food-card {
+  text-align: center;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.food-card:hover {
+  transform: translateY(-4px);  
+}
+
+.food-card-image {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;           
+  background: white  ;       
+  margin: 0 auto 14px;
+  overflow: hidden;             
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.food-card-image img {
+  width: 110px;
+  height: 110px;
+  object-fit: contain;
+}
+
+.food-card-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: brown;
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
+.food-card-price {
+  font-size: 13px;
+  color: brown;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.food-card-btn {
+  background: brown;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 7px 18px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: .2s;
+  font-family: inherit;
+}
+
+.food-card-btn:hover {
+  background: #6b1212;
+}
+
+
+.nav__cart {
+  position: relative;
+  cursor: pointer;
+  color: brown;
+}
+
+.cart-count {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background: brown;
+  color: white;
+  font-size: 10px;
+  font-weight: 700;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: none;              
+  align-items: center;
+  justify-content: center;
+  border: 2px solid white;
+}
+
+.checkout-background {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1200;
+}
+
+.checkout-background-open {
+  display: block;
+}
+
+.checkout-box {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  background: white;
+  border-radius: 20px;
+  padding: 32px;
+  width: 90%;
+  max-width: 420px;
+  z-index: 1300;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+.checkout-box-open {
+  display: block;
+}
+
+.checkout-title {
+  color: brown;
+  font-size: 22px;
+  margin-bottom: 6px;
+}
+
+.checkout-subtitle {
+  color: #888;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.checkout-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #444;
+  margin-top: 14px;
+  margin-bottom: 4px;
+}
+
+.checkout-input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1.5px solid #e0c9b0;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+  outline: none;
+  transition: border-color .2s;
+  background: white;
+}
+
+.checkout-input:focus {
+  border-color: brown;
+}
+
+.checkout-total-row {
+  background: #fdf0e0;
+  border-radius: 10px;
+  padding: 12px 16px;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 15px;
+}
+
+.checkout-total-amount {
+  color: brown;
+  font-size: 20px;
+  margin-left: 6px;
+}
+
+.checkout-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.place-order-btn {
+  flex: 1;
+  padding: 11px 20px;
+  background: brown;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.place-order-btn:hover {
+  background: #6b1212;
+}
+
+.cancel-btn {
+  flex: 1;
+  padding: 11px 20px;
+  background: white;
+  color: brown;
+  border: 1.5px solid brown;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.cancel-btn:hover {
+  background: #fdf0e0;
+}
+
+.done-btn {
+  width: 100%;
+  margin-top: 20px;
+}
+.success-screen {
+  text-align: center;
+}
+
+.success-emoji {
+  font-size: 60px;
+  margin-bottom: 12px;
+}
+
+.success-text {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+.success-text strong {
+  color: brown;
+}
