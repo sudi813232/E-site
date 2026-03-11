@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>sandwich - Delicacy</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="categories.css">
+    <style>
+        body {
+            padding-top: 75px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="nav">
+        <div class="nav__container">
+            <div class="nav__logo">
+                <img src="../image/noto.png" alt="NotoBite" class="nav__logo-img">
+            </div>
+            <nav class="nav__menu">
+                <a class="nav__link" href="../index.html">Home</a>
+                <a class="nav__link nav__link--active" href="categories.html">Categories</a>
+                
+            </nav>
+            <div class="nav__profile">
+                <img src="../image/images.png" class="nav__avatar">
+                <span class="nav__username">Sudikshya</span>
+                <div class="nav__cart" id="cartIcon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path fill="currentColor"
+                            d="M17 18c-1.11 0-2 .89-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2M1 2v2h2l3.6 7.59l-1.36 2.45c-.15.28-.24.61-.24.96a2 2 0 0 0 2 2h12v-2H7.42a.25.25 0 0 1-.25-.25q0-.075.03-.12L8.1 13h7.45c.75 0 1.41-.42 1.75-1.03l3.58-6.47c.07-.16.12-.33.12-.5a1 1 0 0 0-1-1H5.21l-.94-2M7 18c-1.11 0-2 .89-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2" />
+                    </svg>
+                    
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="page-wrapper">
+        <div class="sidebar">
+            <h3 class="sidebar-heading">Menu</h3>
+            <a href="categories.html" class="sidebar-item">🍕 Pizza</a>
+            <a href="burger.html" class="sidebar-item">🍔 Burger</a>
+            <a href="sandwich.html" class="sidebar-item sidebar-item-active">🥪 Sandwich</a>
+            <a href="sushi.html" class="sidebar-item">🍱 Sushi</a>
+            <a href="chicken.html" class="sidebar-item">🍗 Fried Chicken</a>
+        </div>
+
+        <div class="food-section">
+            <p class="breadcrumb">Menu / Sandwich</p>
+            <h1 class="section-title">Sandwich</h1>
+            <h2 class="section-subtitle">Choose Your Sandwich</h2>
+            <div class="food-grid" id="sandwichGrid"></div>
+        </div>
+    </div>
+
+    <div class="cart-tab" id="cartTab">
+        <h2>Your Cart</h2>
+        <div class="cart-list" id="cartList"></div>
+        <div class="total-container">
+            <h4>Total:</h4>
+            <h4 class="cart-total" id="cartTotal">$0.00</h4>
+        </div>
+        <div class="btn-container">
+            <button type="button" class="btn checkout-btn" id="checkoutBtn">Checkout</button>
+            <button type="button" class="btn close-btn" id="closeBtn">Close</button>
+        </div>
+    </div>
+
+    <div class="checkout-background" id="checkoutOverlay"></div>
+    <div class="checkout-box" id="checkoutPopup">
+        <div class="checkout-form" id="checkoutForm">
+            <h2 class="checkout-title"> Checkout</h2>
+            <p class="checkout-subtitle">Fill in your details</p>
+            <label class="checkout-label">Your Name</label>
+            <input class="checkout-input" type="text" id="userName" placeholder="e.g. Sudikshya">
+            <label class="checkout-label">Phone Number</label>
+            <input class="checkout-input" type="text" id="userPhone" placeholder="e.g. 9800000000">
+            <label class="checkout-label">Delivery Address</label>
+            <input class="checkout-input" type="text" id="userAddress" placeholder="e.g. Kathmandu, Ward 5">
+            <label class="checkout-label">Payment Method</label>
+            <select class="checkout-input" id="paymentMethod">
+                <option value="">-- Select --</option>
+                <option value="Cash on Delivery">💵 Cash on Delivery</option>
+                <option value="UPI">📱 UPI</option>
+                <option value="Card">💳 Card</option>
+            </select>
+            <div class="checkout-total-row">
+                Total: <strong class="checkout-total-amount" id="checkoutTotal">$0.00</strong>
+            </div>
+            <div class="checkout-buttons">
+                <button class="place-order-btn" onclick="placeOrder()">Place Order ✅</button>
+                <button class="cancel-btn" onclick="closeCheckout()">Cancel</button>
+            </div>
+        </div>
+
+        <div class="success-screen" id="successMessage" style="display:none;">
+            <div class="success-emoji">🎉</div>
+            <h2 class="checkout-title">Order Placed!</h2>
+            <p class="success-text">Thank you, <strong id="thankYouName"></strong>!</p>
+            <p class="success-text">Delivering to: <strong id="thankYouAddress"></strong></p>
+            <p class="success-text">Payment: <strong id="thankYouPayment"></strong></p>
+            <p class="success-text">We'll call you on: <strong id="thankYouPhone"></strong></p>
+            <button class="place-order-btn done-btn" onclick="closeCheckout()">Done 🍔</button>
+        </div>
+    </div>
+
+    <script src="sandwich.js"></script>
+</body>
+
+</html>

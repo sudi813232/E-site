@@ -102,31 +102,7 @@ pizzaItems.forEach((item) => {
   pizzaGrid.appendChild(card);
 });
 
-const burgerItems = [
-  { name: "Veg Burger", price: 180, image: "../image/burger.png" },
-  { name: "Chicken Burger", price: 220, image: "../image/burger.png" },
-];
 
-const burgerGrid = document.getElementById("burgerGrid");
-
-burgerItems.forEach((item) => {
-  const card = document.createElement("div");
-  card.classList.add("food-card");
-  card.innerHTML = `
-    <div class="food-card-image">
-      <img src="${item.image}" alt="${item.name}">
-    </div>
-    <p class="food-card-name">${item.name}</p>
-    <p class="food-card-price">$${item.price}</p>
-    <button class="food-card-btn">Add to Cart</button>
-  `;
-
-  card.querySelector(".food-card-btn").addEventListener("click", () => {
-    addToCart(item.name, item.price, item.image);
-    cartTab.classList.add("active");
-  });
-  burgerGridGrid.appendChild(card);
-});
 
 
 
